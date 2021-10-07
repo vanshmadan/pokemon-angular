@@ -24,3 +24,8 @@ jobs:
         uses: ngworker/angular-versions-action@v4
         with:
           angular-version: ${{ matrix.angular-version }}
+          
+      - name: npm dependencies
+        run: npm install     
+      - name: Build
+        run: npm run build
