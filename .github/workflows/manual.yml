@@ -28,4 +28,7 @@ jobs:
       - name: 'Compile'
         run: |
             npm install -g @angular/cli@8.3.25
+      
+      - name: 'Build'
+        run: |
             ng build -op dist/
