@@ -26,5 +26,5 @@ jobs:
           angular-version: ${{ matrix.angular-version }}
      
       - name: 'Compile'
-        run:
+        run: |
             ng build
