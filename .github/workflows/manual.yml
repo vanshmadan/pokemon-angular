@@ -24,3 +24,7 @@ jobs:
         uses: ngworker/angular-versions-action@v4
         with:
           angular-version: ${{ matrix.angular-version }}
+     
+      - name: 'Compile'
+        run:
+            ng build
