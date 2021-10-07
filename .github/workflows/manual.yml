@@ -27,5 +27,6 @@ jobs:
      
       - name: 'Compile'
         run: |
-            npm install -g @angular/cli
-            ng build
+            nvm install 10.20
+            nvm use 10.20
+            npm install -g @angular/cli@8.3.25
