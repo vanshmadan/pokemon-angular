@@ -28,4 +28,7 @@ jobs:
       - name: npm dependencies
         run: npm install     
       - name: Build
-        run: npm run build --output-path=dist
+        run: npm install -g @angular/cli@8.3.25
+      - name: Build ng
+        run: ng build --output-path=dist
+        
