@@ -1,0 +1,21 @@
+name: Test
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+jobs:
+  linux-lts:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: ./
+      with:
+        node-version: 10.2
+    - name: Check
+      run: |
+        which node
+        node -v
+        which npm
+        npm -v
+        
