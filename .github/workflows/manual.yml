@@ -1,0 +1,26 @@
+name: CI/CD workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        angular-version:
+          - 10.2.x
+          
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 10.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 10.x
+      - name: Use Angular ${{ matrix.angular-version }}
+        uses: ngworker/angular-versions-action@v4
+        with:
+          angular-version: ${{ matrix.angular-version }}
