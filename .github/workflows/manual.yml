@@ -31,4 +31,4 @@ jobs:
       
       - name: 'Build'
         run: |
-            ng build -op dist/
+            ng build
